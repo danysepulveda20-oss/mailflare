@@ -10,10 +10,8 @@ permissions:
 
 jobs:
   checks:
-    # Update Mailflare copies .github/workflows into every installation
-    # repository; this keeps the checks from running (and using Actions
-    # minutes) there.
-    if: github.repository == 'hieunc229/mailflare'
+    # Validate this installation before merging or deploying updates.
+    if: github.repository == 'danysepulveda20-oss/mailflare'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
